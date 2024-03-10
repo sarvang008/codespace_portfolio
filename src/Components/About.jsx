@@ -48,37 +48,6 @@ const detailOrQuote =
   "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
 
 const About = () => {
-  const calXirr = () => {
- // Define cash flows and dates
-// Define cash flows and dates
-const initialInvestment = -100000; // Initial investment of 1 lakh rupees
-const annualPayment = -100000; // Annual payment of 1 lakh rupees for 10 years
-const annualBenefit = 141920; // Annual benefit of 1,41,920 rupees for 30 years starting from the 15th year
-const annualPaymentsStartYear = 15;
-const maturityBenefit = 1000000; // Maturity benefit after 45 years
-
-// Create cash flows and dates arrays
-const cashFlows = [initialInvestment];
-
-for (let year = 1; year <= 45; year++) {
-  if (year >= annualPaymentsStartYear && year < annualPaymentsStartYear + 10) {
-    cashFlows.push(annualPayment);
-  } else if (year >= annualPaymentsStartYear + 10 && year < annualPaymentsStartYear + 40) {
-    cashFlows.push(annualBenefit);
-  } else {
-    cashFlows.push(0);
-  }
-}
-
-cashFlows[45] = maturityBenefit;// Calculate XIRR using financejs
-
-const xirr = irr(cashFlows);
-
-console.log(xirr);
-
-  }
-
-  calXirr();
 
   return (
     <section className="padding" id="about">
